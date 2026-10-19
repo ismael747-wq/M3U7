@@ -1,0 +1,24 @@
+-- Creacion de la base de datos
+CREATE DATAABSE practica_dml.db,
+
+-- Creación de la tabla vendedores
+CREATE TABLE IF NOT EXISTS vendedores (
+    ID_vendedor INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    ventas_totales REAL NOT NULL DEFAULT 0.0,
+    zona TEXT NOT NULL,
+    fecha_ingreso DATE NOT NULL
+);
+
+-- Inserción de 10 registros de prueba
+INSERT INTO vendedores (nombre, ventas_totales, zona, fecha_ingreso) VALUES
+('Carlos Gómez', 15400.50, 'Norte', '2023-01-15'),
+('Lucía Fernández', 22300.00, 'Sur', '2022-11-20'),
+('Martín Pérez', 18950.75, 'Este', '2023-03-10'),
+('Sofía Romero', 31200.20, 'Oeste', '2021-08-05'),
+('Javier Díaz', 12100.00, 'Norte', '2023-05-18'),
+('Valeria Torres', 27800.90, 'Centro', '2022-04-12'),
+('Esteban Ruiz', 9500.30, 'Sur', '2023-09-01'),
+('Mariana López', 34500.00, 'Centro', '2021-02-14'),
+('Gonzalo Castro', 16750.60, 'Este', '2022-12-03'),
+('Camila Morales', 21400.10, 'Oeste', '2023-07-22');
