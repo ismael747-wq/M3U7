@@ -7,8 +7,8 @@ DROP TABLE if exists vendedores;
 CREATE TABLE vendedores (
     ID_vendedor INT PRIMARY KEY,
     nombre TEXT NOT NULL,
-    ventas_totales REAL NOT NULL DEFAULT 0.0,
-    zona TEXT NOT NULL,
+    ventas_totales DECIMAL (10,2) NOT NULL DEFAULT 0.0,
+    zona VARCHAR (50) NOT NULL,
     fecha_ingreso DATE NOT NULL
 );
 
@@ -24,3 +24,10 @@ INSERT INTO vendedores (ID_vendedor, nombre, ventas_totales, zona, fecha_ingreso
 ('7','Mariana López', 34500.00, 'Centro', '2021-02-14'),
 ('8','Gonzalo Castro', 16750.60, 'Este', '2022-12-03'),
 ('10','Camila Morales', 21400.10, 'Oeste', '2023-07-22');
+
+-- Se realiza una consulta para obtener nombre y venta_totales de los vendedores de zona 'Norte'
+
+SELECT nombre, ventas_totales 
+from vendedores
+where zona = 'Norte'
+order by ventas_totales desc;
