@@ -1,1 +1,3 @@
-# M3U7
+-- #Ejercico del modulo 3 95410#
+-- ##Trabajando sobre la tabla 'Vendedores'##--
+--En este ejercicio se ejecutan comando de DDL y DML sobre la tabla 'Vendedores'--
