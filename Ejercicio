@@ -31,3 +31,25 @@ SELECT nombre, ventas_totales
 from vendedores
 where zona = 'Norte'
 order by ventas_totales desc;
+
+-- Se agregan tres nuevos vendedores con sus valores
+
+INSERT INTO vendedores
+(ID_vendedor, nombre, ventas_totales, zona, fecha_ingreso) VALUES
+(11,'Cecila Gomez', 17800.50, 'Norte', '2023-12-15'),
+(12,'Fabian Albornoz', 28000.00, 'Sur', '2023-12-20'),
+(13,'Analia Colque', 51300.75, 'Este', '2023-12-10');
+
+-- Se actualiza con UPDATE las ventas totales del vendedor ID  = 2
+
+UPDATE vendedores
+SET ventas_totales = ventas_totales + 500
+WHERE ID_vendedor = 2;
+
+-- Se actualiza borrando un vendedor con la clausula DELETE
+
+DELETE FROM vendedores
+WHERE ID_vendedor = 4;
+
+SELECT * FROM vendedores;
+
